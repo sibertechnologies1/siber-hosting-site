@@ -62,7 +62,7 @@ function Pricing() {
 
                 <div className="flex flex-col p-4 shadow corperate-plan">
                     <div className="my-4 copPlan-Img">
-                    <img src={Basic} alt="" />
+                    <img src={Cop} alt="" />
                     </div>
                     <h4 className='my-1 font-bold text-md'>Corperate Plan</h4>
                     <p className='my-1 text-xs font-light'>2TB SSD Space</p>
