@@ -1,7 +1,11 @@
 import React from 'react';
-import HeroImg from './HeroImg/HeroImg.JPG';
+import HeroImg from './HeroImg/HeroImg.jpg';
+
+
+
 
 function Hero() {
+  console.log('Hero image path:', HeroImg);
   return (
     <section className="flex flex-col justify-between w-full h-full md:flex-row">
       <div className="bg-[#15803d] hero-text md:w-1/2 w-full text-justify p-12">

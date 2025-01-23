@@ -5,7 +5,7 @@ function NewsLetter() {
     <div className=' mt-6'>
       <div className="flex flex-col text-center">
         <span className=' text-lg'>Our News Letter</span>
-        <h1 className=' md:text-[2rem] sm:text-[1.7rem] text-[1.4rem] font-bold'>Subscribe to Our Newsletter to <br /> <span className=' text-[#15803d] mt-1'>Get Updates on Our Latest Offers</span></h1>
+        <h1 className=' md:text-[2rem] sm:text-[1.7rem] text-[1.4rem] font-bold'>Subscribe to Our Newsletter to <br /> Get  <span className=' text-[#15803d] mt-1'>Updates on Our Latest Offers</span></h1>
         <p className=' my-1 text-sm'>Get 25% off on your first order just by subscribing to our newsletter</p>
         <div className="flex gap-1 items-center justify-center ">
            <form action="">

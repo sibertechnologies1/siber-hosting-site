@@ -1,8 +1,8 @@
 import React from 'react'
-import Basic from "../Pricing/PricingImgs/Basic.PNG"
-import Prof from "../Pricing/PricingImgs/Prof.PNG"
-import Ult from "../Pricing/PricingImgs/Ult.PNG"
-import Cop from "../Pricing/PricingImgs/Cop.PNG"
+import Basic from "./PricingImgs/Basic.png"
+import Prof from "./PricingImgs/Prof.png"
+import Ult from "./PricingImgs/Ult.png"
+import Cop from "./PricingImgs/Cop.png"
 function Pricing() {
   return (
     <div>
