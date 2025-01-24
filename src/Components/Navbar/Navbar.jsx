@@ -16,9 +16,9 @@ function Navbar({ links }) {
   };
 
   return (
-    <div className="relative">
+    <div className="fixed top-[4.5rem] left-0 w-full z-50 bg-white shadow-md">
       {/* Navbar Wrapper */}
-      <div className="flex items-center justify-between w-full p-3 bg-white">
+      <div className="flex items-center justify-between w-full p-3">
         {/* Logo - Hidden on larger screens */}
         <div className="ml-4 text-xl font-bold text-[#15803d] md:hidden">
           <a href="#">Siber Techs</a>

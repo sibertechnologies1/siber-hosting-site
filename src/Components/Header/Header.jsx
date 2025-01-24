@@ -1,15 +1,15 @@
 import React from 'react';
-import { FaCloud, FaPhone, FaLock, FaUserPlus } from 'react-icons/fa';
+import { FaPhone, FaLock, FaUserPlus } from 'react-icons/fa';
 
 function Header() {
   return (
-    <div>
+    <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
       <div className="border-b-2 my-3 h-[3.4rem] w-full">
         <div className="flex items-center justify-between w-full">
           {/* Logo Section */}
           <div className="flex gap-2 mx-4 mt-2 text-xl sm:text-2xl text-[#15803d] items-center">
             <h1 className='font-bold bg-[#fbbf24] px-3 py-1 rounded-[50%] text-2xl'>S</h1>
-            <h2 className="hidden font- md:block">Siber Techs</h2>
+            <h2 className="hidden md:block">Siber Techs</h2>
           </div>
 
           {/* Contact and Credentials Section */}
@@ -17,7 +17,7 @@ function Header() {
             {/* Phone Section */}
             <div className="flex items-center gap-1 whitespace-nowrap">
               <FaPhone className="text-lg sm:text-xl" />
-              <p className="text-sm sm:text-base">+233 543 5292 84</p>
+              <p className="text-sm sm:text-base">+233 543 529 284</p>
             </div>
 
             {/* Login and SignUp Section */}

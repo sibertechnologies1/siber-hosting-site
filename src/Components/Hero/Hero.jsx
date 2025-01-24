@@ -5,9 +5,9 @@ import HeroImg from './HeroImg/HeroImg.jpg';
 
 
 function Hero() {
-  console.log('Hero image path:', HeroImg);
+
   return (
-    <section className="flex flex-col justify-between w-full h-full md:flex-row">
+    <section className="flex flex-col justify-between my-[7rem] w-full h-full md:flex-row">
       <div className="bg-[#15803d] hero-text md:w-1/2 w-full text-justify p-12">
         <h1 className="my-2 text-2xl font-bold text-white md:text-3xl">
           Fully-Managed SSD <br /> Shared Hosting
