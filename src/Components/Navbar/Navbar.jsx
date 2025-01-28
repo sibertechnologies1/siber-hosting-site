@@ -102,7 +102,7 @@ Navbar.defaultProps = {
     { name: 'About Us', href: '#' },
     { name: 'Service', href: '#' },
     { name: 'Blog', href: '#' },
-    { name: 'Contact Us', href: '#' },
+    { name: 'Contact Us', href: '/contact' },
   ],
 };
 

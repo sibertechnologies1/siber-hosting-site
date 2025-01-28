@@ -3,6 +3,9 @@ import {AiOutlineGoogle} from "react-icons/ai";
 import { SiTrustpilot } from "react-icons/si";
 // import Hosting2 from "./RatingImgs/Hosting2.jpg"
 import Hosting2 from "./SolutionImg/Hosting2.jpg"
+import google from "./SolutionImg/google.png"
+import trustpilot from "./SolutionImg/trustpilot.png"
+import hellopeter from "./SolutionImg/hellopeter.png"
 function Solution() {
   return (
    <div className='px-12 my-24 flex flex-col md:flex-row'>
@@ -18,9 +21,10 @@ function Solution() {
          <h1 className='text-xl font-semibold my-2'>Hosting solutions <span className=' font-light'>for any project</span></h1>
          <p className='text-sm m'>We offer a wide range of hosting solutions to suit your needs and budget. Choose from virtual servers, dedicated servers, domain names, cloud servers, shared hosting and more. Traffic is included in every package, so you will never have any costly surprises. Join us today and see why we're ranked as Ghana's top hosting provider.</p>
  
-         <div className="flex flex-col md:flex-row gap-3">
-           <a href="#" className='bg-green-800 text-sm rounded-md p-4 text-white font-bold my-3 w-full md:w-auto text-center'>See Hosting Plans ⌄</a>
-           <a href="#" className='text-green-800 text-sm font-bold mt-6 w-full md:w-auto text-center'>Speak to an Expert</a>
+         <div className="flex flex-col lg:flex-row gap-3 my-8">
+            <img src={google} className=' w-[6rem] h-[4rem] cursor-pointer mx-4' alt="" srcset="" />
+            <img src={trustpilot} className=' w-[8rem] h-[4rem] cursor-pointer mx-4' alt="" srcset="" />
+            <img src={hellopeter} className=' w-[10rem] h-[6rem] cursor-pointer mx-4' alt="" srcset="" />
          </div>
        </div>
  
