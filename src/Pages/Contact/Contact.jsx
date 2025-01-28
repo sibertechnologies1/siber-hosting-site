@@ -5,6 +5,7 @@ import { GrLocation, GrPhone } from 'react-icons/gr';
 import { FaPaperPlane } from 'react-icons/fa';
 import { GiWorld } from 'react-icons/gi';
 import ContactImg1 from './ContactImg/ContactImg1.jpg';
+import Footer from '../../Components/Footer/Footer';
 
 const ContactInfo = ({ Icon, title, value, href }) => (
   <div className="flex flex-col justify-center items-center">
@@ -22,7 +23,7 @@ function Contact() {
       <Navbar />
       <div className="flex flex-col w-full justify-center items-center px-16 my-20">
         <h1 className="font-bold text-xl mt-12">Contact Siber Techs On:</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 my-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 my-10">
           <ContactInfo Icon={GrLocation} title="Address" value="Barekese, Kumasi" />
           <ContactInfo Icon={GrPhone} title="Phone" value="(+233) 054 352 9284" href="tel:0543529284" />
           <ContactInfo Icon={FaPaperPlane} title="Email" value="sibertechs@gmail.com" href="mailto:sibertechs@gmail.com" />
@@ -58,6 +59,8 @@ function Contact() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }
