@@ -1,5 +1,5 @@
 import React from 'react'
-import GridImg from "./HostingGrid2Img/GridImg.Jpg"
+import GridImg from "./HostingGrid2Img/GridImg.jpg"
 function HostingGrid2() {
   return (
     <div className=' md:px-16 px-6 my-20 w-full flex lg:flex-row flex-col gap-16 justify-center items-center'>
