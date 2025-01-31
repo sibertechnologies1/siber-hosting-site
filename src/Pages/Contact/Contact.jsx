@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../Components/Header/Header';
 import Navbar from '../../Components/Navbar/Navbar';
 import { GrLocation, GrPhone } from 'react-icons/gr';
@@ -17,6 +17,41 @@ const ContactInfo = ({ Icon, title, value, href }) => (
 );
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('http://localhost:3000/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', subject: '', message: '' }); // Clear form
+      } else {
+        alert('There was an error sending the message.');
+      }
+    } catch (error) {
+      alert('Error submitting the form.');
+    }
+  };
+
   return (
     <>
       <Header />
@@ -31,30 +66,64 @@ function Contact() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full px-4 ">
-          <form className="flex flex-col  border shadow-2xl rounded-md p-4">
+          <form onSubmit={handleSubmit} className="flex flex-col  border shadow-2xl rounded-md p-4">
             <h2 className="text-3xl mb-4">Contact Us</h2>
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex flex-col">
                 <label className="font-bold uppercase text-sm">Full Name</label>
-                <input type="text" className="border-b-2 outline-none p-3 w-full focus:border-[#15803d]" placeholder="Name" required />
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="border-b-2 outline-none p-3 w-full focus:border-[#15803d]"
+                  placeholder="Name"
+                  required
+                />
               </div>
               <div className="flex flex-col">
                 <label className="font-bold uppercase text-sm">Email Address</label>
-                <input type="email" className="border-b-2 outline-none p-3 w-full focus:border-[#15803d]" placeholder="Email" required />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="border-b-2 outline-none p-3 w-full focus:border-[#15803d]"
+                  placeholder="Email"
+                  required
+                />
               </div>
             </div>
             <div className="flex flex-col my-4">
               <label className="font-bold uppercase text-sm">Subject</label>
-              <input type="text" className="border-b-2 outline-none p-3 w-full focus:border-[#15803d]" placeholder="Subject" required />
+              <input
+                type="text"
+                name="subject"
+                value={formData.subject}
+                onChange={handleInputChange}
+                className="border-b-2 outline-none p-3 w-full focus:border-[#15803d]"
+                placeholder="Subject"
+                required
+              />
             </div>
             <div className="flex flex-col my-4">
               <label className="font-bold uppercase text-sm">Message</label>
-              <textarea className="border-2 outline-none p-3 w-full focus:border-[#15803d]" rows="4" placeholder="Message" required></textarea>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                className="border-2 outline-none p-3 w-full focus:border-[#15803d]"
+                rows="4"
+                placeholder="Message"
+                required
+              ></textarea>
             </div>
-            <button type="submit" className="bg-[#15803d] text-white py-2 px-4 rounded-lg mt-4 hover:bg-[#0f581e]">Send Message</button>
+            <button type="submit" className="bg-[#15803d] text-white py-2 px-4 rounded-lg mt-4 hover:bg-[#0f581e]">
+              Send Message
+            </button>
           </form>
 
-          <div className="w-full ">
+          <div className="w-full border shadow-2xl p-4">
             <img src={ContactImg1} alt="Contact Us" className="w-1/2 object-cover rounded-lg" />
           </div>
         </div>
