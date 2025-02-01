@@ -12,7 +12,7 @@ function Navbar({ links }) {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className="fixed top-[4.5rem] left-0 w-full z-50 bg-white shadow-md">
+    <div className="fixed top-[4.5rem] left-0 w-full z-[1000] bg-white shadow-md">
       {/* Navbar Wrapper */}
       <div className="flex items-center justify-between w-full p-3">
         {/* Logo - Hidden on larger screens */}
