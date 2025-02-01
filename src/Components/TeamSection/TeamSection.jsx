@@ -1,6 +1,6 @@
 import React from "react";
 import Team1 from "./Team1.jpg";
-import Team2 from "./Team2.png";
+import team2 from "./team2.png";
 
 const TeamSection = () => {
   const team = [
@@ -13,7 +13,7 @@ const TeamSection = () => {
     { 
       name: "Cobby Bossman", 
       role: "CTO", 
-      img: Team2, 
+      img: team2, 
       bio: "Cobby has been instrumental in driving the technical direction of the company. He brings expertise in software development and systems architecture, overseeing the development of cutting-edge solutions for our clients."
     },
   ];
